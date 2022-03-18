@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,28 +9,23 @@
   </head>
   <body>
     <h1>Formulário de Contato</h1>
+
     <form
-      action="https://formsubmit.co/your@email.com"
+      action="envia-email.php"
       method="POST"
       class="form"
     >
-      <label for="name">Nome</label>
-      <input type="text" name="name" id="name" required />
+      <label for="name">Name</label>
+      <input type="text" name="name"  required />
 
-      <label for="name">CPF</label>
-      <input type="text" name="name" id="cpf" required onkeyup="mascara_cpf()" />
+      <label for="cpf">CPF</label>
+      <input type="text" name="name"  required onkeyup="mascara_cpf()" />
 
       <label for="email">E-mail</label>
-      <input type="email" name="email" id="email" required />
+      <input type="email" name="email" required />
 
-      <label for="message">Mensagem</label>
-      <textarea name="message" id="message" required></textarea>
-      <input type="hidden" name="_captcha" value="false" />
-      <input
-        type="hidden"
-        name="_next"
-        value="https://yourdomain.co/thanks.html"
-      />
+      <label for="">Mensagem</label>
+      <textarea name="mensagem"  required></textarea>
       <button type="submit">Enviar</button>
 
       <script src="script.js"></script>
