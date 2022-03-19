@@ -1,10 +1,10 @@
 <?php
 
 
-$nome = utf8_encode($_POST['name']);
-$cpf = utf8_encode($_POST['cpf']);
-$email = utf8_encode($_POST['email']);
-$mensagem = utf8_encode($_POST['mensagem']);
+$name = utf8_encode ($_POST['name']);
+$cpf = utf8_encode ($_POST['cpf']);
+$email = utf8_encode ($_POST['email']);
+$mensagem = utf8_encode ($_POST['mensagem']);
 
 require 'PHPMailer/PHPMailerAutoload.php';
 
@@ -23,23 +23,17 @@ $mail->Password = "Junior123";
 
 //Configuração da mensagem
 
-$mail->setFrom($mail->Username,"uilsonsouzaphp@gmail.com"); //Remetente
-$mail->addAddress (''); //Destinatário
+$mail->setFrom($mail->Username,"@Uilson Souza"); //Remetente
+$mail->addAddress ('uilsonsouzaphp@gmail.com'); //Destinatário
 $mail->Subject = "Fale com Conosco"; //Assunto do E-mail
 
 
-$conteudo_email = "
-Eu Passei no teste ? 
-$nome $email ($cpf):<br><br>
-
-Mensagem:<br>
-$mensagem
-";
+$conteudo_email = "Eu Passei no teste ?";
 
 $mail->IsHTML(true);
 $mail->body = $conteudo_email;
 
-if ($mail->send()) {
+if ($mail->send('')) {
     echo "E-mail enviado com sucesso!";
 
 } else {
