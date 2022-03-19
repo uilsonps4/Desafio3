@@ -9,23 +9,18 @@
   </head>
   <body>
 
-    <h1>Formulário de Contato</h1>
-
     <form action="envioEmail.php" method="POST" class="form">
-      <label for="name">Name</label>
-      <input type="text" name="name"  required />
-
-      <label for="cpf">CPF</label>
-      <input type="text" name="cpf"  required onkeyup="mascara_cpf()" />
-
-      <label for="email">E-mail</label>
-      <input type="email" name="email" required />
-
-      <label for="">Mensagem</label>
-      <textarea name="mensagem"  required></textarea>
-      <button type="submit">Enviar</button>
+     <label>Nome:</label>
+     <input type="text" name="nome"><br>
+     <label>CPF</label>
+     <input type="text" name="cpf"><br>
+     <label>Email</label>
+     <input type="email" name="email"><br>
+     <label>Mensagem</label>
+     <input type="text" name="mensagem"><br>
+     <input type="submit">
+    </form>
 
       <script src="script.js"></script>
-    </form>
   </body>
 </html>
