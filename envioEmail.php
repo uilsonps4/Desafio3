@@ -6,8 +6,7 @@ $cpf = utf8_encode ($_POST['cpf']);
 $email = utf8_encode ($_POST['email']);
 $mensagem = utf8_encode ($_POST['mensagem']);
 
-require 'PHPMailer/PHPMailerAutoload.php'
-
+require 'PHPMailer/PHPMailerAutoload.php';
 
 $mail = new PHPMailer;
 $mail->isSMTP();
@@ -15,16 +14,16 @@ $mail->isSMTP();
 //Configurações do Servidor de email
 
 $mail->Host = "smtp.gmail.com";
-$mail->Port = "587";
-$mail->SMTPSecure = "tls";
+$mail->Port = "25";
+$mail->SMTPSecure = "lts";
 $mail->SMTPAuth = "true";
-$mail->Username = "uilsonps4@gmail.com";
-$mail->Password = "Junior123";
+$mail->Username = "email@gmail.com";
+$mail->Password = "";
 
 //Configuração da mensagem
 
 $mail->setFrom($mail->Username,"Uilson Souza"); //Remetente
-$mail->addAddress ('uilsonps4@gmail.com'); //Destinatário
+$mail->addAddress ('email@gmail.com'); //Destinatário
 $mail->Subject = "Fale com Conosco"; //Assunto do E-mail
 
 
